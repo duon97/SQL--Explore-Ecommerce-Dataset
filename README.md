@@ -218,8 +218,9 @@ GROUP BY 1;
 | 1	| 201707| 43.86
 
 💡 The average revenue per user per visit was approximately $43.86. This indicates a healthy revenue per session for users who made purchases.
-> To analyze revenue contribution by device type
-#### Query 07: Revenue contribution by device (desktop, mobile, tablet). Ordered by revenue ratio (descending)
+
+
+#### Query 7️⃣: Revenue contribution by device (desktop, mobile, tablet). Ordered by revenue ratio (descending)
 >  To analyze revenue contribution by device type
 ```sql
 SELECT
@@ -247,9 +248,11 @@ ORDER BY ratio DESC;
 | mobile  | 56553.10   | 1742046.97 | 3.25  |
 | tablet  | 10748.13   | 1742046.97 | 0.62  |
 
+💡Desktop users account for an overwhelming share of total ecommerce revenue, contributing approximately 96% of overall transaction value. In contrast, mobile and tablet devices generate only a marginal proportion of revenue, indicating that purchasing behavior remains heavily concentrated on desktop platforms. 
+This pattern suggests that users are considerably more inclined to complete transactions on desktop devices than on smaller-screen alternatives.
 
 
-#### Query 7️⃣: Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
+#### Query 8️⃣: Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
 > To identify additional products customers frequently buy with "YouTube Men's Vintage Henley" in July 2017 
 ```sql 
 WITH 
@@ -295,7 +298,7 @@ ORDER BY 2 desc;
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
 
 
-#### Query 8️⃣: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+#### Query `9`: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
 > To analyze the efficiency of the buying process and customers' behavior from product view to add-to-cart to purchase within a specific time period 
 ```sql 
 WITH product_data as(
