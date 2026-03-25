@@ -327,8 +327,8 @@ FROM product_data;
 | 2	| 201702| 21489| 7360| 2060| 34.25| 9.59
 | 3	| 201703| 23549| 8782| 2977| 37.29| 12.64
 
-💡 The add-to-cart conversion rate has improved each month, indicating growing user engagement with products. <br> 
-The purchase conversion rate is also on an upward trend, suggesting more effective conversion strategies over time. <br> 
+💡 The add-to-cart conversion rate has improved each month, indicating growing user engagement with products.
+The purchase conversion rate is also on an upward trend, suggesting more effective conversion strategies over time. 
 Identify and analyze the strategies implemented in March that led to the highest conversion rates.
 
 
