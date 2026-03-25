@@ -1,4 +1,4 @@
-# Explore-Ecommerce-Dataset
+<img width="1102" height="226" alt="image" src="https://github.com/user-attachments/assets/c2f9419e-f537-42c6-95f8-2c2828ef3391" /># Explore-Ecommerce-Dataset
 
 # I. Introduction
 
@@ -327,7 +327,9 @@ FROM product_data;
 | 2	| 201702| 21489| 7360| 2060| 34.25| 9.59
 | 3	| 201703| 23549| 8782| 2977| 37.29| 12.64
 
-💡 An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise in accumulated sales suggests healthy business growth and steady progress toward revenue objectives.
+💡 The add-to-cart conversion rate has improved each month, indicating growing user engagement with products. <br> 
+The purchase conversion rate is also on an upward trend, suggesting more effective conversion strategies over time. <br> 
+Identify and analyze the strategies implemented in March that led to the highest conversion rates.
 
 
 
@@ -375,9 +377,8 @@ FROM week_revenue;
 | 2017-29 | 57,111.46 | 383,927.37 |
 | 2017-30 | 29,493.94 | 413,421.31 |
 
-💡An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is
-consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise
-in accumulated sales suggests healthy business growth and steady progress toward revenue objectives.
+💡 An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise in accumulated sales suggests healthy business growth and steady progress toward revenue objectives
+
 ---
 
 ## 🔎 Final Conclusion & Recommendations  
