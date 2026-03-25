@@ -360,10 +360,9 @@ SELECT
     2
   ) AS cumulative_revenue
 FROM week_revenue;
-
-
-| week   | weekly_revenue | cumulative_revenue |
-|--------|---------------:|-------------------:|
+```
+| Week    | Weekly Revenue | Cumulative Revenue |
+|---------|--------------------------:|------------------------------:|
 | 2017-18 | 32,588.71 | 32,588.71 |
 | 2017-19 | 34,741.41 | 67,330.12 |
 | 2017-20 | 27,606.74 | 94,936.86 |
