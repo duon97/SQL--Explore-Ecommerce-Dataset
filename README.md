@@ -36,7 +36,7 @@ The primary goal of this project is to analyze and gain insights from the eComme
 | hits.product.productRevenue | INTEGER | The revenue of the product, expressed as the value passed to Analytics multiplied by 10^6 (e.g., 2.40 would be given as 2400000). |
 | hits.product.productSKU | STRING | Product SKU. | 
 | hits.product.v2ProductName | STRING | Product Name. |
-## 📊 Explore the Dataset & Generate Insights
+## IV. Explore the Dataset & Generate Insights
 
 #### Query 1️⃣: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 > To evaluate the website's performance through total visits, pageviews, and transactions 
