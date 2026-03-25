@@ -1,5 +1,4 @@
 # Explore-Ecommerce-Dataset
-# SQL---Explore-Ecommerce-Dataset- 
 
 # I. Introduction
 
@@ -18,3 +17,22 @@ The primary goal of this project is to analyze and gain insights from the eComme
 - **Products Analysis**: Perform an analysis of products viewed, added to carts, and purchased to better understand product performance and customer interest.
 
 ## III. Dataset description table 
+| Field Name                         | Data Type |
+|------------------------------------|-----------|
+| `fullVisitorId`                    | STRING    |
+| `date`                             | STRING    |
+| `totals`                           | RECORD    |
+| `totals.bounces`                   | INTEGER   |
+| `totals.hits`                      | INTEGER   |
+| `totals.pageviews`                 | INTEGER   |
+| `totals.visits`                    | INTEGER   |
+| `totals.transactions`              | INTEGER   |
+| `trafficSource.source`             | STRING    |
+| `hits`                             | RECORD    |
+| `hits.eCommerceAction`             | RECORD    |
+| `hits.eCommerceAction.action_type` | STRING    |
+| `hits.product`                     | RECORD    |
+| `hits.product.productQuantity`     | INTEGER   |
+| `hits.product.productRevenue`      | INTEGER   |
+| `hits.product.productSKU`          | STRING    |
+| `hits.product.v2ProductName`       | STRING    |
