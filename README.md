@@ -378,7 +378,9 @@ FROM week_revenue;
 | 2017-29 | 57,111.46 | 383,927.37 |
 | 2017-30 | 29,493.94 | 413,421.31 |
 
-💡An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise in accumulated sales suggests healthy business growth and steady progress toward revenue objectives.
+💡An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is
+consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise
+in accumulated sales suggests healthy business growth and steady progress toward revenue objectives.
 ---
 
 ## 🔎 Final Conclusion & Recommendations  
