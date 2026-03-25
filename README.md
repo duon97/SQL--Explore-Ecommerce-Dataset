@@ -252,7 +252,7 @@ ORDER BY ratio DESC;
 This pattern suggests that users are considerably more inclined to complete transactions on desktop devices than on smaller-screen alternatives.
 
 
-#### Query 8️⃣: Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
+#### Query 8️⃣: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
 > To identify additional products customers frequently buy with "YouTube Men's Vintage Henley" in July 2017 
 ```sql 
 WITH 
@@ -298,8 +298,7 @@ ORDER BY 2 desc;
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
 
  
-#### Query ![9](https://img.shields.io/badge/-9-informational)
-: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+#### Query 9️⃣: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
 > To analyze the efficiency of the buying process and customers' behavior from product view to add-to-cart to purchase within a specific time period 
 ```sql 
 WITH product_data as(
@@ -333,6 +332,53 @@ The purchase conversion rate is also on an upward trend, suggesting more effecti
 Identify and analyze the strategies implemented in March that led to the highest conversion rates.
 
 
+
+
+#### Query 🔟: Calculate revenue by week from May to July 2017 and culmulative revenue.
+> To monitor sales performance and evaluate revenue growth over time
+```sql
+
+WITH week_revenue AS (
+  SELECT
+    FORMAT_DATE('%Y-%W', PARSE_DATE('%Y%m%d', date)) AS week,
+    ROUND(SUM(product.productRevenue) / 1000000, 2) AS weekly_revenue
+  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*`,
+    UNNEST(hits) AS hits,
+    UNNEST(hits.product) AS product
+  WHERE
+    _TABLE_SUFFIX BETWEEN '0501' AND '0731'
+    AND product.productRevenue IS NOT NULL
+  GROUP BY week
+  ORDER BY week
+)
+
+SELECT
+  week,
+  weekly_revenue,
+  ROUND(
+    SUM(weekly_revenue) OVER (ORDER BY week),
+    2
+  ) AS cumulative_revenue
+FROM week_revenue;
+
+
+| week   | weekly_revenue | cumulative_revenue |
+|--------|---------------:|-------------------:|
+| 2017-18 | 32,588.71 | 32,588.71 |
+| 2017-19 | 34,741.41 | 67,330.12 |
+| 2017-20 | 27,606.74 | 94,936.86 |
+| 2017-21 | 20,198.54 | 115,135.40 |
+| 2017-22 | 31,789.52 | 146,924.92 |
+| 2017-23 | 19,751.87 | 166,676.79 |
+| 2017-24 | 45,053.91 | 211,730.70 |
+| 2017-25 | 28,583.26 | 240,313.96 |
+| 2017-26 | 24,813.41 | 265,127.37 |
+| 2017-27 | 20,437.74 | 285,565.11 |
+| 2017-28 | 41,250.80 | 326,815.91 |
+| 2017-29 | 57,111.46 | 383,927.37 |
+| 2017-30 | 29,493.94 | 413,421.31 |
+
+💡An upward trend in cumulative revenue reflects sustained sales performance and indicates that the business is consistently generating revenue over time. Despite short‑term fluctuations in weekly revenue, the continued rise in accumulated sales suggests healthy business growth and steady progress toward revenue objectives.
 ---
 
 ## 🔎 Final Conclusion & Recommendations  
