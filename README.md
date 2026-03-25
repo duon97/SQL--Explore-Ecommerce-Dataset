@@ -218,6 +218,35 @@ GROUP BY 1;
 | 1	| 201707| 43.86
 
 💡 The average revenue per user per visit was approximately $43.86. This indicates a healthy revenue per session for users who made purchases.
+> To analyze revenue contribution by device type
+#### Query 07: Revenue contribution by device (desktop, mobile, tablet). Ordered by revenue ratio (descending)
+>  To analyze revenue contribution by device type
+```sql
+SELECT
+  device.deviceCategory AS device,
+  SUM(product.productRevenue) / 1000000 AS revenue_by_device,
+  SUM(SUM(product.productRevenue) / 1000000) OVER() AS total_revenue,
+  ROUND(
+    SUM(product.productRevenue) / 1000000
+    / SUM(SUM(product.productRevenue) / 1000000) OVER(),
+    2
+  ) AS ratio
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+UNNEST(hits) AS hits,
+UNNEST(hits.product) AS product
+WHERE
+  totals.transactions IS NOT NULL
+  AND product.productRevenue IS NOT NULL
+GROUP BY device
+ORDER BY ratio DESC;
+```
+
+| device  | revenue_by_device | total_revenue | ratio |
+|--------|------------------:|--------------:|------:|
+| desktop | 1674745.74 | 1742046.97 | 96.14 |
+| mobile  | 56553.10   | 1742046.97 | 3.25  |
+| tablet  | 10748.13   | 1742046.97 | 0.62  |
+
 
 
 #### Query 7️⃣: Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017.
