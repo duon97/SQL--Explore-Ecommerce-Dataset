@@ -1,4 +1,3 @@
-<img width="1102" height="226" alt="image" src="https://github.com/user-attachments/assets/c2f9419e-f537-42c6-95f8-2c2828ef3391" /># Explore-Ecommerce-Dataset
 
 # I. Introduction
 
