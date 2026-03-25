@@ -197,7 +197,7 @@ ORDER BY 1;
  |---|---|---
  | 1	 | 201707 | 4.16390041493776
 
-The average number of transactions per user who made a purchase is approximately 4.16. This indicates that users who made purchases were likely to make multiple transactions within the same month.
+💡 The average number of transactions per user who made a purchase is approximately 4.16. This indicates that users who made purchases were likely to make multiple transactions within the same month.
 
 
 #### Query 6️⃣: Average amount of money spent per session. Only include purchaser data in July 2017
