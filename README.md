@@ -298,7 +298,7 @@ ORDER BY 2 desc;
 Create bundle deals featuring popular combinations like "YouTube Men's Vintage Henley" with "Google Sunglasses" and other related products. This could encourage customers to make larger purchases and increase overall sales.
 
 
-#### Query `9`: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
+#### Query #9: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017.
 > To analyze the efficiency of the buying process and customers' behavior from product view to add-to-cart to purchase within a specific time period 
 ```sql 
 WITH product_data as(
